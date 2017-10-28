@@ -1,7 +1,6 @@
 package tirol.peer.david.hellojava;
 
-import static org.hamcrest.core.Is.*;
-
+//import static org.hamcrest.core.Is.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,6 +27,7 @@ public class MathTest {
       int expected = 7;
       int actual = _testee.add(a, b);
 
-    Assert.assertThat(expected, is(actual));
+//    Assert.assertThat(expected, is(actual));
+    Assert.assertEquals(expected,actual);
    }
 }
