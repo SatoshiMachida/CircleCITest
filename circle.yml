@@ -11,12 +11,12 @@ dependencies:
   override:
     - docker info
     - if [[ -e ~/docker/image.tar ]]; then docker load --input ~/docker/image.tar; fi
-    - docker build -t peerdavid/hellojava .
-    - mkdir -p ~/docker; docker save peerdavid/hellojava > ~/docker/image.tar
+    - docker build -t SatoshiMachida/CircleCITest .
+    - mkdir -p ~/docker; docker save SatoshiMachida/CircleCITest > ~/docker/image.tar
 
 deployment:
   docker:
     branch: Editter
     commands:
       - docker login -e $EMAIL -u $USER -p $PASSWORD
-      - docker push satoshi/CircleCITest
+      - docker push SatoshiMachida/CircleCITest
