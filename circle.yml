@@ -11,12 +11,12 @@ dependencies:
   override:
     - docker info
     - if [[ -e ~/docker/image.tar ]]; then docker load --input ~/docker/image.tar; fi
-    - docker build -t SatoshiMachida/CircleCITest .
-    - mkdir -p ~/docker; docker save SatoshiMachida/CircleCITest > ~/docker/image.tar
+    - docker build -t satoshimachida/circlecitest .
+    - mkdir -p ~/docker; docker save satoshimachida/circlecitest > ~/docker/image.tar
 
 deployment:
   docker:
     branch: Editter
     commands:
       - docker login -e $EMAIL -u $USER -p $PASSWORD
-      - docker push SatoshiMachida/CircleCITest
+      - docker push satoshimachida/circlecitest
