@@ -16,7 +16,7 @@ dependencies:
 
 deployment:
   docker:
-    branch: master
+    branch: Editter
     commands:
       - docker login -e $EMAIL -u $USER -p $PASSWORD
-      - docker push peerdavid/hellojava
+      - docker push satoshi/CircleCITest
